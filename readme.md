@@ -1,5 +1,9 @@
 # Normal-it
 
+[![CircleCI](https://img.shields.io/circleci/project/jdrouet/normal-it.svg?maxAge=2592000)](https://circleci.com/gh/jdrouet/normal-it)
+[![codecov](https://codecov.io/gh/jdrouet/normal-it/branch/master/graph/badge.svg)](https://codecov.io/gh/jdrouet/normal-it)
+![Dependencies](https://david-dm.org/jdrouet/normal-it.svg)
+
 ## Quick Start
 
 ```json
