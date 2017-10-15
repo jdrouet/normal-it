@@ -1,6 +1,6 @@
 {
   "name": "normal-it",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Normalizes and denormalizes JSON according to schema for Redux and Flux applications",
   "main": "dist/source/index.js",
   "files": [

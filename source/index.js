@@ -47,12 +47,14 @@ class Denormalizer {
   }
 
   getEntity(id, schema) {
+    if (!this.entities[schema.name]) return null;
     return this.entities[schema.name][id];
   }
 
   getForRelation(parent, parentSchema, relation) {
     if (relation.type === hasMany) {
       const parentId = parentSchema.getId(parent);
+      if (!this.entities[relation.entity.name]) return [];
       const keys = Object
         .entries(this.entities[relation.entity.name])
         .filter(entry => entry[1][relation.foreignKey] === parentId)
@@ -71,6 +73,7 @@ class Denormalizer {
 
   extractEntity(id, schema) {
     const entity = this.getEntity(id, schema);
+    if (!entity) return null;
     if (!this.cache[schema.name]) {
       this.cache[schema.name] = {};
     }
