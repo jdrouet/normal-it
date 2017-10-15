@@ -1,0 +1,41 @@
+{
+  "name": "normal-it",
+  "version": "1.0.0",
+  "description": "Normalizes and denormalizes JSON according to schema for Redux and Flux applications",
+  "main": "dist/source/index.js",
+  "files": [
+    "dist/",
+    "readme.md"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "test": "jest",
+    "prebuild": "npm run clean",
+    "lint": "eslint source",
+    "build": "npm run build:web && npm run build:node",
+    "build:web": "rollup -c",
+    "build:node": "babel source/*.js -d dist/"
+  },
+  "keywords": [],
+  "author": "Jeremie Drouet <jeremie.drouet@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-stage-1": "^6.24.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "jest": "^21.2.1",
+    "regenerator-runtime": "^0.11.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-filesize": "^1.4.2",
+    "rollup-plugin-uglify": "^2.0.1"
+  }
+}
