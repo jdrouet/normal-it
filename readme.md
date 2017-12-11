@@ -7,6 +7,7 @@
 ## Why?
 
 This library is inspired by [Normalizr](https://github.com/paularmstrong/normalizr) and comes with an improvement of the relational point of view.
+What does it do more than `normalizr`? With `normal-it` you can normalize and denormalize entities in a relational way, including `hasMany` and `hasManyThrough` relations.
 
 ## Quick Start
 
